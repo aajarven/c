@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-09-02 18:12:06</datetime>
+  <suite>
+    <title>hello-world</title>
+    <test result="failure">
+      <path>.</path>
+      <fn>test_source.c:22</fn>
+      <id>test_hello</id>
+      <iteration>0</iteration>
+      <duration>-1.000000</duration>
+      <description>test_hello</description>
+      <message>Your output:
+Hello World!
+... and the universe
+
+Right output:
+Hello World!
+
+your output is longer than expected: character: &apos;.&apos;, position: 1, line: 2
+
+</message>
+    </test>
+  </suite>
+  <duration>0.090017</duration>
+</testsuites>
