@@ -17,7 +17,7 @@ START_TEST(test_digits) {
     char userString[1000];
     char message[100] = "";
     char* rightString = "9 0 8 7 6 5 \n";
-    fread(userString, 999, 1, fp);
+    fgets(userString, 1000, fp);
     int ret = mycompare(userString, rightString, message);
     ck_assert_msg(!ret, "Your output:\n%s\nRight output:\n%s\n%s\n", userString, rightString, message);
     fclose(fp);

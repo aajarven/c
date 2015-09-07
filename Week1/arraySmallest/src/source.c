@@ -3,5 +3,11 @@
 #include <stdio.h>
 
 int smallest_number(int array[], int size) {
-    return 0;
+    int pienin = array[0];
+    
+    for(int i=1; i<size; i++){
+        pienin = pienin > array[i] ? array[i]: pienin;
+    }
+    
+    return pienin;
 }

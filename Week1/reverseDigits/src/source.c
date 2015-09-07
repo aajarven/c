@@ -1,17 +1,12 @@
 #include "source.h"
 
 int reverse_digits(int number){
+    int kaanteinen = 0;
     
-    //BEGIN SOLUTION
-    int reversed = 0;
-    
-    while (number != 0){
-        reversed *= 10;
-        reversed += number % 10;
-        number /= 10;
+    while(number>0){
+        kaanteinen+=number%10;
+        number/=10;
     }
-    
-    return reversed;
-    
-    //END SOLUTION
+
+    return kaanteinen;    
 }

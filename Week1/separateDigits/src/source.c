@@ -3,21 +3,20 @@
 #include "source.h"
 
 void separate_digits(int number){
-    
-    //BEGIN SOLUTION
-    int count = 0;
-    int temp = number;
-    while (temp > 0){
-        count++;
-        temp /= 10;
+
+    int pituus = ceil(log10(number));
+    int numerot[pituus];
+    int i = 0;
+
+    while(number > 0){
+        numerot[i]= number%10;
+        number/=10;
+        i++;
     }
-    int i;
-    
-    for (i = pow(10, (count-1)); i > 0; i /= 10){
-        printf("%d ", (number/i) % 10);
+
+    for(int i=pituus-1; i>=0; i--){
+        printf("%i ", numerot[i]);
     }
-    
-    printf("\n");
-    
-    //END SOLUTION
+
+    printf("\n");  
 }

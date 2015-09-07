@@ -8,7 +8,27 @@
 #include "../src/source.h"
 
 
-START_TEST(test_print)
+int tiinaRead (char *str, int len, FILE * file)
+{
+ int i= 0;
+ char merkki=0;
+
+ while (i<(len-1)) {
+    merkki=fgetc(file);
+    if (merkki == EOF) {
+      *str = '\0';
+      return i;
+    } else {
+      *str++=merkki;
+      i++;
+    }
+   }
+*str = '\0';
+return i;
+}
+
+
+START_TEST(test_printTree)
 {
     FILE* fp;
     fp = freopen("mockoutput", "w", stdout);
@@ -19,7 +39,7 @@ START_TEST(test_print)
     char message[100] = "";
     char* rightString = "         *\n        ***\n       *****\n      *******\n     *********\n    ***********\n   *************\n  ***************\n *****************\n*******************\n        ***\n        ***\n";
     //char* rightString2 = "         *         \n        ***        \n       *****       \n      *******      \n     *********     \n    ***********    \n   *************   \n  ***************  \n ***************** \n*******************\n        ***        \n        ***        \n";
-    fread(userString, 999, 1, fp);
+    tiinaRead(userString, 999, fp);
     int ret = mycompare(userString, rightString, message);
     //int ret2 = mycompare(userString, rightString2, message);
     ck_assert_msg(!ret, "Your output:\n%s\nRight output:\n%s\n%s\n", userString, rightString, message);
@@ -31,6 +51,6 @@ int main(int argc, const char *argv[])
 {
     srand((unsigned)time(NULL));
 	Suite *s = suite_create("printTree");
-	tmc_register_test(s, test_print, "printTree");
+	tmc_register_test(s, test_printTree, "printTree");
 	return tmc_run_tests(argc, argv, s);
 }

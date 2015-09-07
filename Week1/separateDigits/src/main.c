@@ -7,6 +7,6 @@
  * 1 2 3 4 5 */
 
 int main() {
-    separate_digits(1234509876);
+    separate_digits(908765);
     return 0;
 }

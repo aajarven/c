@@ -5,6 +5,6 @@
  * */
 
 int main(void) {
-    printf("%d\n", binary_to_decimal(11101110));
+    printf("%d\n", binary_to_decimal(1110));
     return 0;
 }
