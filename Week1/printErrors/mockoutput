@@ -1,0 +1,2 @@
+100%: Checks: 1, Failures: 0, Errors: 0
+test_source.c:53:P:test_count_sum:test_count_sum:0: Passed

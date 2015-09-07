@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-09-06 14:43:27</datetime>
+  <suite>
+    <title>separateDigits</title>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:22</fn>
+      <id>test_digits</id>
+      <iteration>0</iteration>
+      <duration>0.000389</duration>
+      <description>test_digits</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.000915</duration>
+</testsuites>

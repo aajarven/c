@@ -1,0 +1,3 @@
+error
+100%: Checks: 1, Failures: 0, Errors: 0
+test_source.c:106:P:test_calculate:test_calculate:0: Passed

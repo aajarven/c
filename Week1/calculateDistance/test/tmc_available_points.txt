@@ -1,0 +1,3 @@
+[test] [test_distanceFromOrigo] calculateDistance
+[test] [test_distance] calculateDistance
+[test] [test_powerTwo] calculateDistance

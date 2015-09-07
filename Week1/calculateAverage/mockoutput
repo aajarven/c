@@ -1,0 +1,3 @@
+3.00
+100%: Checks: 1, Failures: 0, Errors: 0
+test_source.c:26:P:test_average:test_average:0: Passed

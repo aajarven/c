@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-09-05 02:43:11</datetime>
+  <suite>
+    <title>multiplymatrix</title>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:21</fn>
+      <id>test_multiply_matrix</id>
+      <iteration>0</iteration>
+      <duration>0.018964</duration>
+      <description>test_multiply_matrix</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.080633</duration>
+</testsuites>

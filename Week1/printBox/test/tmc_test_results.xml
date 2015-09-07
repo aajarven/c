@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-09-06 14:43:15</datetime>
+  <suite>
+    <title>printBox</title>
+    <test result="failure">
+      <path>.</path>
+      <fn>test_source.c:23</fn>
+      <id>test_printBox</id>
+      <iteration>0</iteration>
+      <duration>-1.000000</duration>
+      <description>test_printBox</description>
+      <message>Your output:
+##
+##
+##
+Æ‚¿*
+Right output:
+##
+##
+##
+
+your output is longer than expected: character: &apos;(invalid)&apos;, position: 1, line: 4
+
+</message>
+    </test>
+  </suite>
+  <duration>0.000688</duration>
+</testsuites>

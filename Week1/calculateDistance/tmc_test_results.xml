@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-09-06 14:50:16</datetime>
+  <suite>
+    <title>calculateDistance</title>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:17</fn>
+      <id>test_powerTwo</id>
+      <iteration>0</iteration>
+      <duration>0.008547</duration>
+      <description>test_powerTwo</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:28</fn>
+      <id>test_distance</id>
+      <iteration>0</iteration>
+      <duration>0.002058</duration>
+      <description>test_distance</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:40</fn>
+      <id>test_distanceFromOrigo</id>
+      <iteration>0</iteration>
+      <duration>0.001995</duration>
+      <description>test_distanceFromOrigo</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.076118</duration>
+</testsuites>
