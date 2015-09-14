@@ -9,5 +9,8 @@
 int main(void) {
     char *str = "This is a string";
     printf("%d\n", count_alpha(str));
+    //printf("\n")
+    printf("%s %d\n", "b-_I\\FE", count_alpha("b-_I\\FE"));
+
     return 0;
 }

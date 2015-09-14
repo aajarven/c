@@ -12,6 +12,7 @@
 int main(void) {
     int size = 5;
     int* array = dynamic_reader(size);
+    //printf("Palautus: %p", (void*) array);
     printf("Numbers: \n");
     for (int i = 0; i < size; i++){
         printf("%d\n", array[i]);

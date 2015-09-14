@@ -11,7 +11,7 @@ int main()
 
     char str[] = "one two one twotwo three";
 
-    remove_substr(str, "one");
+    remove_substr(str, "two");
     printf("remove_substr: %s\n", str);
     
     return 0;

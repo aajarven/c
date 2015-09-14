@@ -1,0 +1,1 @@
+[test] [test_is_palindrome] ispalindrome

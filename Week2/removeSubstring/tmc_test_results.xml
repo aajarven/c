@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-09-14 22:15:11</datetime>
+  <suite>
+    <title>removeSubstring</title>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:26</fn>
+      <id>test_remove_substr</id>
+      <iteration>0</iteration>
+      <duration>0.011876</duration>
+      <description>test_remove_substr</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.077220</duration>
+</testsuites>

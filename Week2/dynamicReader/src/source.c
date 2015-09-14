@@ -3,5 +3,15 @@
 #include <stdlib.h>
 
 int* dynamic_reader(int size) {
-    return NULL;  // replace this
+    int *luetut = malloc(size * sizeof(int));
+    int *kasiteltava = luetut;
+
+   // printf("%p %p",  (void*) luetut, (void*) kasiteltava);
+
+    while(kasiteltava <= &luetut[size-1]){
+        scanf("%i", kasiteltava);
+        //printf("%p", (void*) kasiteltava);
+        kasiteltava++;
+    }
+    return luetut;
 }
