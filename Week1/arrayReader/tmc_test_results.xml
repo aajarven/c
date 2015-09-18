@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
 <testsuites xmlns="http://check.sourceforge.net/ns">
-  <datetime>2015-09-06 17:58:05</datetime>
+  <datetime>2015-09-16 16:26:40</datetime>
   <suite>
     <title>arrayReader</title>
     <test result="success">
@@ -9,10 +9,10 @@
       <fn>test_source.c:42</fn>
       <id>test_array_reader</id>
       <iteration>0</iteration>
-      <duration>0.031239</duration>
+      <duration>0.038801</duration>
       <description>test_array_reader</description>
       <message>Passed</message>
     </test>
   </suite>
-  <duration>0.091998</duration>
+  <duration>0.132243</duration>
 </testsuites>
