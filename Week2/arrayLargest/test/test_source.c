@@ -19,6 +19,10 @@ void print_array(char *buf, int *arr, int n) {
 
 START_TEST(test_largest_num) {
     int arr[8];
+    int kiint_arr[]={1,50,7,40,-1,100};
+    if (largest_number(kiint_arr)>50)
+      fail("You are either reading beyond the last value or modifying the values in the array.\n");
+
     for (int i = 0; i < 3; i++) {
         int len = rand() % 6 + 1;
         int mod = 0;

@@ -14,6 +14,7 @@ int main(void) {
         "symbols or elements, whose meaning\n"
         "may be interpreted the same way in\n"
         "either forward or reverse direction\n";
+//    char testString[] = "moi kaikki";
     printf("1: %s", testString);
     reversed_words(testString);  
     printf("2: %s\n", testString);
