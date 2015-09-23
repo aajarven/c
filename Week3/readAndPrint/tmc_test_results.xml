@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-09-20 11:04:02</datetime>
+  <suite>
+    <title>ReadAndPrint</title>
+    <test result="failure">
+      <path>.</path>
+      <fn>test_source.c:22</fn>
+      <id>test_readAndPrint</id>
+      <iteration>0</iteration>
+      <duration>1944.658412</duration>
+      <description>test_readAndPrint</description>
+      <message>Your output:
+
+Right output:
+44 76.76 r
+
+output correct until position: 1, line: 1, but shorter than expected. Next character should be &apos;4&apos;
+
+</message>
+    </test>
+  </suite>
+  <duration>0.085179</duration>
+</testsuites>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-09-20 13:39:27</datetime>
+  <suite>
+    <title>wordCount</title>
+    <test result="failure">
+      <path>.</path>
+      <fn>test_source.c:19</fn>
+      <id>test_word_count</id>
+      <iteration>0</iteration>
+      <duration>1209.017177</duration>
+      <description>test_word_count</description>
+      <message>Should have returned 0 for file empty.txt. You returned -1.</message>
+    </test>
+  </suite>
+  <duration>0.077541</duration>
+</testsuites>

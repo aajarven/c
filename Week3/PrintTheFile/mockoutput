@@ -1,0 +1,2 @@
+#include <stdio.h>?#include "fileread.h"??int main(void)?{?    if (textdump("main.c") == -1) {?        if (textdump("src/main.c") == -1) {?            fprintf(stderr, "Could not open main.c\n");?        }?    }?}?100%: Checks: 1, Failures: 0, Errors: 0
+test_source.c:35:P:test_textdump:test_textdump:0: Passed

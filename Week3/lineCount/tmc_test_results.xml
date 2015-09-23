@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-09-20 14:11:20</datetime>
+  <suite>
+    <title>lineCount</title>
+    <test result="failure">
+      <path>.</path>
+      <fn>test_source.c:17</fn>
+      <id>test_line_count</id>
+      <iteration>0</iteration>
+      <duration>-1.000000</duration>
+      <description>test_line_count</description>
+      <message>Should have returned 0 for file empty.txt. You returned -1.</message>
+    </test>
+  </suite>
+  <duration>0.076983</duration>
+</testsuites>
