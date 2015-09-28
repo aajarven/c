@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-09-29 01:17:51</datetime>
+  <suite>
+    <title>readLines</title>
+    <test result="failure">
+      <path>.</path>
+      <fn>test_source.c:22</fn>
+      <id>test_read_lines</id>
+      <iteration>0</iteration>
+      <duration>1020.896461</duration>
+      <description>test_read_lines</description>
+      <message>Should have returned 0 for file empty.txt. You returned -1.</message>
+    </test>
+    <test result="failure">
+      <path>.</path>
+      <fn>test_source.c:40</fn>
+      <id>test_shortest_line</id>
+      <iteration>0</iteration>
+      <duration>1020.858932</duration>
+      <description>test_shortest_line</description>
+      <message>Should have returned 0 for file oneline.txt. You returned -1.</message>
+    </test>
+    <test result="failure">
+      <path>.</path>
+      <fn>test_source.c:59</fn>
+      <id>test_first_lexi_line</id>
+      <iteration>0</iteration>
+      <duration>1020.855728</duration>
+      <description>test_first_lexi_line</description>
+      <message>Should have returned 3 for file alpha.txt. You returned 0.</message>
+    </test>
+  </suite>
+  <duration>0.093709</duration>
+</testsuites>

@@ -1,0 +1,3 @@
+[test] [test_avgargs] avgargs
+[test] [test_arrayavg] arrayarg
+[test] [test_args2int] args2int

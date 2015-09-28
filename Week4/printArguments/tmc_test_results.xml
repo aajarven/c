@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-09-29 01:24:00</datetime>
+  <suite>
+    <title>Test-demo</title>
+    <test result="failure">
+      <path>.</path>
+      <fn>test_source.c:46</fn>
+      <id>test_print</id>
+      <iteration>0</iteration>
+      <duration>2051.298744</duration>
+      <description>test_print</description>
+      <message>Your output:
+test/test
+
+Right output:
+./test
+command
+line
+arguments
+
+position: 1, line: 1, your output: &apos;t&apos; , expected: &apos;.&apos;
+
+</message>
+    </test>
+  </suite>
+  <duration>0.083764</duration>
+</testsuites>

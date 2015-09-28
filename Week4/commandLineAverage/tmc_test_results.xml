@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-09-29 01:44:58</datetime>
+  <suite>
+    <title>IntegerArguments</title>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:22</fn>
+      <id>test_args2int</id>
+      <iteration>0</iteration>
+      <duration>0.011620</duration>
+      <description>test_args2int</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:32</fn>
+      <id>test_arrayavg</id>
+      <iteration>0</iteration>
+      <duration>0.001764</duration>
+      <description>test_arrayavg</description>
+      <message>Passed</message>
+    </test>

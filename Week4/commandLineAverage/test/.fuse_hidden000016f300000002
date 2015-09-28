@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-09-29 01:29:55</datetime>
+  <suite>
+    <title>IntegerArguments</title>
+    <test result="error">
+      <path>.</path>
+      <fn>test_source.c:13</fn>
+      <id>test_args2int</id>
+      <iteration>0</iteration>
+      <duration>-1.000000</duration>
+      <description>test_args2int</description>
+      <message>Test timeout expired</message>
+    </test>

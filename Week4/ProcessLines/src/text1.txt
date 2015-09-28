@@ -1,0 +1,13 @@
+This file is a short file.
+It contains some meaningless text.
+It contains some meaningless text.
+It contains some meaningless text.
+It contains some meaningless text.
+It also contains some very long lines to test that your programs does not assume any particular line lenght. This line is not even particularly long.
+Very short.
+And a bit longer.
+But not very many lines altogether.
+Lets have sone numbered lines also
+1 2 3 4 5
+Here is a again some text. Did you notice that the function call had three asterisk characters (*) in the array argument. 
+Were you able to figure out, why all three were needed? If not, please take a short moment to think abou their possible meanings.
