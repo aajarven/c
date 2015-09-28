@@ -8,7 +8,7 @@ void readAndPrint(char* file){
     float luettuFloat;
     char luettuChar;
 
-    if((luettava = fopen(file, "r")) == NULL){
+    if(luettava = fopen(file, "r")){
         fprintf(stderr, "tiedostoa ei voida avata");
         return;
     }
