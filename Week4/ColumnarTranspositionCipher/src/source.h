@@ -1,7 +1,7 @@
 /*Header file for columnar transpostion cipher*/
 
 
-char*** create_encode_matrix(char *source, int col_count, char pad);
+char** create_encode_matrix(char *source, int col_count, char pad);
 /* create_encode_matrix:
  * Allocates space for the encoding matrix and places the ALPHANUMERIC characters of the string to the matrix
  * arguments:   string - plain text string to be ciphered
