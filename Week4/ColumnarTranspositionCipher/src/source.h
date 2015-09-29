@@ -11,6 +11,7 @@ char** create_encode_matrix(char *source, int col_count, char pad);
  */
 //char* create_encode_matrix(char* string, int rows, int columns, char pad);
 
+char** create_decode_matrix(char *source, int col_count);
 /* create_decode_matrix:
  * Allocates space for the decoding matrix and places the ALPHANUMERIC characters of the string to the matrix
  * arguments:   string - plain text string to be ciphered
@@ -55,3 +56,6 @@ int encode_string_with_key(char* source, char* dest, char* key, char pad);
 int decode_string_with_key(char* source, char* dest, char* key);
 
 int tarvittavatrivit(int lukuja, int sarakemaara);
+int* sarakkeiden_jarjestys(char* key);
+char* hae_sarake(char **matriisi, int sarake, int pituus);
+void kirjoita_matriisiin(char ***matriisi, int sarake, char* kirjoitettava, int pituus);

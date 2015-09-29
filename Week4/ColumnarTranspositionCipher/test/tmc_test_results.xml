@@ -1,48 +1,45 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
 <testsuites xmlns="http://check.sourceforge.net/ns">
-  <datetime>2015-09-29 16:11:24</datetime>
+  <datetime>2015-09-29 20:48:22</datetime>
   <suite>
     <title>ColumnarCipher</title>
-    <test result="error">
+    <test result="success">
       <path>.</path>
       <fn>test_source.c:25</fn>
       <id>test_encode_string</id>
       <iteration>0</iteration>
-      <duration>-1.000000</duration>
+      <duration>0.000013</duration>
       <description>test_encode_string</description>
-      <message>Received signal 11 (Segmentation fault)</message>
+      <message>Passed</message>
     </test>
-    <test result="failure">
+    <test result="success">
       <path>.</path>
-      <fn>test_source.c:67</fn>
+      <fn>test_source.c:52</fn>
       <id>test_decode_string</id>
       <iteration>0</iteration>
-      <duration>-1.000000</duration>
+      <duration>0.000012</duration>
       <description>test_decode_string</description>
-      <message>Your function decode_string returned 0, which indicates that a) its not yet implemented, b) you did not return the length of the encoded string, c) the encoded sting has no content
-</message>
+      <message>Passed</message>
     </test>
-    <test result="failure">
+    <test result="success">
       <path>.</path>
-      <fn>test_source.c:94</fn>
+      <fn>test_source.c:79</fn>
       <id>test_encode_string_with_key</id>
       <iteration>0</iteration>
-      <duration>-1.000000</duration>
+      <duration>0.000014</duration>
       <description>test_encode_string_with_key</description>
-      <message>Your function encode_string returned 0, which indicates that a) its not yet implemented, b) you did not return the length of the encoded string, c) the encoded sting has no content
-</message>
+      <message>Passed</message>
     </test>
-    <test result="failure">
+    <test result="success">
       <path>.</path>
-      <fn>test_source.c:121</fn>
+      <fn>test_source.c:106</fn>
       <id>test_decode_string_with_key</id>
       <iteration>0</iteration>
-      <duration>-1.000000</duration>
+      <duration>0.000016</duration>
       <description>test_decode_string_with_key</description>
-      <message>Your function decode_string returned 0, which indicates that a) its not yet implemented, b) you did not return the length of the encoded string, c) the encoded sting has no content
-</message>
+      <message>Passed</message>
     </test>
   </suite>
-  <duration>0.102808</duration>
+  <duration>0.001112</duration>
 </testsuites>
