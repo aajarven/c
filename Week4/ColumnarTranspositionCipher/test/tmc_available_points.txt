@@ -1,0 +1,4 @@
+[test] [test_decode_string_with_key] DecodeWithKey
+[test] [test_encode_string_with_key] EncodeWithKey
+[test] [test_decode_string] DecodeString
+[test] [test_encode_string] EncodeString
