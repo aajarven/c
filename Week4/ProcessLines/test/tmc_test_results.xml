@@ -1,36 +1,36 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
 <testsuites xmlns="http://check.sourceforge.net/ns">
-  <datetime>2015-09-29 03:31:33</datetime>
+  <datetime>2015-09-29 13:41:54</datetime>
   <suite>
     <title>readLines</title>
-    <test result="error">
+    <test result="success">
       <path>.</path>
       <fn>test_source.c:23</fn>
       <id>test_read_lines</id>
       <iteration>0</iteration>
-      <duration>-1.000000</duration>
+      <duration>0.030368</duration>
       <description>test_read_lines</description>
-      <message>Received signal 6 (Aborted)</message>
+      <message>Passed</message>
     </test>
-    <test result="error">
+    <test result="success">
       <path>.</path>
-      <fn>test_source.c:29</fn>
+      <fn>test_source.c:42</fn>
       <id>test_shortest_line</id>
       <iteration>0</iteration>
-      <duration>-1.000000</duration>
+      <duration>0.000530</duration>
       <description>test_shortest_line</description>
-      <message>Received signal 11 (Segmentation fault)</message>
+      <message>Passed</message>
     </test>
-    <test result="error">
+    <test result="success">
       <path>.</path>
       <fn>test_source.c:62</fn>
       <id>test_first_lexi_line</id>
       <iteration>0</iteration>
-      <duration>-1.000000</duration>
+      <duration>0.000489</duration>
       <description>test_first_lexi_line</description>
-      <message>Received signal 11 (Segmentation fault)</message>
+      <message>Passed</message>
     </test>
   </suite>
-  <duration>0.374710</duration>
+  <duration>0.032503</duration>
 </testsuites>

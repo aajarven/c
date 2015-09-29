@@ -6,8 +6,8 @@
 #include <errno.h>
 #include <limits.h>
 
-#define RIVINPITUUS 100
-#define RIVIMAARA 100
+#define RIVINPITUUS 5
+#define RIVIMAARA 5
 
 int read_lines(char *filename, char ***array, int size) {
     FILE *luettava;
@@ -29,27 +29,35 @@ int read_lines(char *filename, char ***array, int size) {
     }
     
     while(fscanf(luettava, "%c", &luettu) != EOF){
-        //printf("luettu kirjain %c\n", luettu);
+        printf("luettu kirjain %c\n", luettu);
         if (luettu == '\n'){
+            
+            printf("kirjain rivillä = %i\n", kirjain_rivilla);
             //printf("luettu newline\n");
             if(rivinro == size){
-                //printf("ifissä\n");
+                printf("lisää rivejä\n");
                 size *= 2;
-                *array = realloc(*array, size);
+                *array = realloc(*array, size*sizeof(char *));
             }
             rivi[kirjain_rivilla] = '\0';
             //printf("rivinro = %i\n", rivinro);
             (*array)[rivinro] = rivi;
             rivinro++;
+            printf("rivinumero: %i\n", rivinro);
             max_linelength = RIVINPITUUS;
             kirjain_rivilla = 0;
+            printf("kirjain rivillä nollattu, nyt %i\n", kirjain_rivilla);
+            
+            printf("kirjain rivillä = %i\n", kirjain_rivilla);
             rivi = malloc(max_linelength*sizeof(char));
         } else {
+            printf("kirjain rivillä = %i\n", kirjain_rivilla);
             rivi[kirjain_rivilla]=luettu;
             kirjain_rivilla++;
             if(kirjain_rivilla==max_linelength){
+                printf("lisää rivitilaa koska kirjain_rivilla on %i\n", kirjain_rivilla);
                 max_linelength*=2;
-                rivi = realloc(rivi, max_linelength);
+                rivi = realloc(rivi, max_linelength*sizeof(char));
             }
         }
         
@@ -62,6 +70,9 @@ int read_lines(char *filename, char ***array, int size) {
     fclose(luettava);
 
     if(edellinen_luettu != '\0' && edellinen_luettu != '\n'){
+        rivi[kirjain_rivilla] = '\0';
+        //printf("rivinro = %i\n", rivinro);
+        (*array)[rivinro] = rivi;
         rivinro++;
     } 
 
@@ -80,7 +91,7 @@ int read_lines(char *filename, char ***array, int size) {
 int shortest_string (char **array, int len)
 {
 
-    int tulostettavaRivi = 0;
+    //int tulostettavaRivi = 0;
     fprintf(stderr, "shortest\n");
     int lyhyimmanPituus = INT_MAX;
     int lyhyimmanIndeksi = -1;
@@ -93,7 +104,7 @@ int shortest_string (char **array, int len)
         //    tutkittavanPituus++;
         //}
         int tutkittavanPituus = strlen(array[tutkittava]);
-        fprintf(stderr, "tutkittavanPituus: %i", tutkittavanPituus);
+        fprintf(stderr, "tutkittavanPituus: %i\n", tutkittavanPituus);
         if(tutkittavanPituus < lyhyimmanPituus){
             lyhyimmanIndeksi = tutkittava;
             lyhyimmanPituus = tutkittavanPituus;

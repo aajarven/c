@@ -29,8 +29,8 @@
  */
 
 int main() {
-    char* filename = "textfile.txt";
-    char **array=NULL;
+    char* filename = "../test/rfc791.txt";
+    char **array;//=NULL;
     int size = 0;
 
     int len = read_lines(filename, &array, size);
