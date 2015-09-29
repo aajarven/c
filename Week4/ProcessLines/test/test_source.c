@@ -16,6 +16,7 @@ START_TEST(test_read_lines)
     char **array;
     int len= 0;
     for (i = 0; i < 6; i++) {
+        fprintf(stderr, "luetaan tiedostoa %s : ", files[i]);
         ret = read_lines(files[i], &array, len);
         switch (i) {
            case 2: fail_unless(ret == results[i], "Should have returned %d for file %s. You returned %d.\n This file does not have end-of-line character at the end of the last line.", results[i], files[i], ret);
@@ -33,6 +34,7 @@ START_TEST(test_shortest_line)
     char **array;
     int len= 0;
     for (i = 0; i < 4; i++) {
+        fprintf(stderr, "luetaan tiedostoa %s shortest lineä varten:  ", files[i]);
         ret = read_lines(files[i], &array, len);
         int pos = shortest_string(array, ret);
         switch (i) {
@@ -52,6 +54,7 @@ START_TEST(test_first_lexi_line)
     char **array;
     int len= 0;
     for (i = 0; i < 4; i++) {
+        fprintf(stderr, "luetaan tiedostoa %s first lexiä varten:  ", files[i]);
         ret = read_lines(files[i], &array, len);
         int pos = find_lexi_first(array, ret);
         switch (i) {
