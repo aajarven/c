@@ -7,72 +7,35 @@
 #include <limits.h>
 
 #define RIVINPITUUS 100
-#define RIVIMAARA 100
 
 int read_lines(char *filename, char ***array, int size) {
     FILE *luettava;
-    int rivinro = 0;
-    int kirjain_rivilla = 0;
-    char luettu;
-    char edellinen_luettu = '\0';
-    int max_linelength = RIVINPITUUS;
-    char *rivi = malloc(max_linelength*sizeof(char));
-
-    if(size == 0){
-        size = RIVIMAARA;
-        *array = malloc(RIVIMAARA*sizeof(char *));
-    }
-
-    if((luettava = fopen(filename, "r")) == NULL){
+    if ( ! (luettava = fopen(filename, "r")) ){
         fprintf(stderr, "%s\n", strerror(errno));
-        return -1;
     }
-    
-    while(fscanf(luettava, "%c", &luettu) != EOF){
-        //printf("luettu kirjain %c\n", luettu);
-        if (luettu == '\n'){
-            //printf("luettu newline\n");
-            if(rivinro == size){
-                //printf("ifissä\n");
-                size *= 2;
-                *array = realloc(*array, size);
-            }
-            rivi[kirjain_rivilla] = '\n';
-            //printf("rivinro = %i\n", rivinro);
-            (*array)[rivinro] = rivi;
-            rivinro++;
-            max_linelength = RIVINPITUUS;
-            kirjain_rivilla = 0;
-            rivi = malloc(max_linelength*sizeof(char));
-        } else {
-            rivi[kirjain_rivilla]=luettu;
-            kirjain_rivilla++;
-            if(kirjain_rivilla==max_linelength){
-                max_linelength*=2;
-                rivi = realloc(rivi, max_linelength);
-            }
+
+    // lasketaan rivien määrä tiedostossa
+    int rivimaara = 0;
+    char luettu;
+    while((luettu = fgetc(luettava)) != EOF){
+        if (luettu = '\n'){
+            rivimaara++;
         }
-        
-       // printf(rivi);
-        //printf("\n");
+    }
+    rewind(luettava);
 
-        edellinen_luettu = luettu;
+    if(size < rivimaara){
+        *array = malloc((rivimaara+1)*sizeof(char *));
     }
     
-    fclose(luettava);
-
-    if(edellinen_luettu != '\0' && edellinen_luettu != '\n'){
-        rivinro++;
-    } 
-
-    /*int tulostettava = 0;
-    while(tulostettava < rivinro ){
-        printf("%s", (*array)[tulostettava]);
-        tulostettava++;
-    }*/
-
-    (*array)[rivinro] = NULL;
-    return rivinro;
+    int rivinro = 0;
+    int kirjainRivilla = 0;
+    char *rivi = malloc(RIVINPITUUS*sizeof(char));
+    while(fscanf(luettava, "%c", &luettu) != EOF){
+        rivinpituus++;
+        if (luettu == '\n'){
+            rivi[kirjainRivilla] = '\0'
+    
 }
 
 
