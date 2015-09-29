@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
 <testsuites xmlns="http://check.sourceforge.net/ns">
-  <datetime>2015-09-28 21:34:40</datetime>
+  <datetime>2015-09-29 15:06:07</datetime>
   <suite>
     <title>StringArray</title>
     <test result="success">
@@ -9,10 +9,10 @@
       <fn>test_source.c:25</fn>
       <id>test_locate_string</id>
       <iteration>0</iteration>
-      <duration>0.006775</duration>
+      <duration>0.006924</duration>
       <description>test_locate_string</description>
       <message>Passed</message>
     </test>
   </suite>
-  <duration>0.070732</duration>
+  <duration>0.069939</duration>
 </testsuites>
