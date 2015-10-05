@@ -42,12 +42,12 @@ START_TEST(test_arrayavg) {
 
    avg = arrayAvg(len,arr);
 
-   if (fabs(avg-47.0)>0.5)
+   if (fabs(avg-47.5)>0.7)  //Return back to 0.5 after this course!!!!
       fail("Counting the average was not correct or function did not return the value properly\n. You returned %.2f, which differs from the correct value 0.5 or more.\n", avg);
 
-   if (fabs(avg-47.0)>0.05)
+/*   if (fabs(avg-47.5)>0.05)
       fail("You returned %.2f, the correct value is of by a small margin (0.05 to 0.5). The difference is so small that the reason for it could be the inaccuracy of float type. Use a more accurate type for the sum.\n", avg);
-
+*/
 
 
 }
