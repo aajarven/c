@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-10-04 18:17:32</datetime>
+  <suite>
+    <title>Test-demo</title>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:20</fn>
+      <id>test_bubblesort</id>
+      <iteration>0</iteration>
+      <duration>0.000043</duration>
+      <description>test_bubblesort</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.000941</duration>
+</testsuites>

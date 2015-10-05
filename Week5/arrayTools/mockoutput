@@ -1,0 +1,4 @@
+100%: Checks: 3, Failures: 0, Errors: 0
+test_source.c:10:P:test_check:test_check:0: Passed
+test_source.c:52:P:test_make_array:test_make_array:0: Passed
+test_source.c:82:P:test_array_idx:test_array_idx:0: Passed

@@ -1,0 +1,7 @@
+[test] [test_divide] 1
+[test] [test_multiply] 1
+[test] [test_subtract] 1
+[test] [test_add] 1
+[test] [test_reduce] 1
+[test] [test_compare] 1
+[test] [test_new] 1
