@@ -1,0 +1,3 @@
+[test] [test_sum] anyData_sum
+[test] [test_print] anyData_print
+[test] [test_set] anyData_set

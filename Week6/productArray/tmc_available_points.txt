@@ -1,0 +1,5 @@
+[test] [test_delete_product] prAdd_delete
+[test] [test_find_product] prArr_find
+[test] [test_remove_all] prArr_remove
+[test] [test_add_product] prArr_add
+[test] [test_init_product] prArr_init

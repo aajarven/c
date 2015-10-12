@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-10-12 18:31:23</datetime>
+  <suite>
+    <title>anyData</title>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:48</fn>
+      <id>test_set</id>
+      <iteration>0</iteration>
+      <duration>0.011106</duration>
+      <description>test_set</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:86</fn>
+      <id>test_print</id>
+      <iteration>0</iteration>
+      <duration>0.022258</duration>
+      <description>test_print</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:117</fn>
+      <id>test_sum</id>
+      <iteration>0</iteration>
+      <duration>0.004112</duration>
+      <description>test_sum</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.102009</duration>
+</testsuites>

@@ -1,0 +1,4 @@
+D:6.666600100%: Checks: 3, Failures: 0, Errors: 0
+test_source.c:48:P:test_set:test_set:0: Passed
+test_source.c:86:P:test_print:test_print:0: Passed
+test_source.c:117:P:test_sum:test_sum:0: Passed

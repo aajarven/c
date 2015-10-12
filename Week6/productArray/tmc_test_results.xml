@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-10-12 22:21:31</datetime>
+  <suite>
+    <title>productArray</title>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:59</fn>
+      <id>test_init_product</id>
+      <iteration>0</iteration>
+      <duration>0.011269</duration>
+      <description>test_init_product</description>
+      <message>Passed</message>
+    </test>
