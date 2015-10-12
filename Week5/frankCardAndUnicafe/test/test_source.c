@@ -20,6 +20,7 @@ START_TEST(test_cash_init)
     ck_assert_msg(fabs(CR_getCashIn(unicafe) - 1000.0) < 0.00001, "Get cash in register doesn't work. Balance should be initially 1000.0, but it was %.2f", CR_getCashIn(unicafe));
     ck_assert_msg(CR_getEconomicalSold(unicafe)==0, "Get cash in register doesn't work. Sold economical meals should be initially 0, but it was %.2f", CR_getEconomicalSold(unicafe));
     ck_assert_msg(CR_getGourmetSold(unicafe)==0, "Get cash in register doesn't work. Sold gourmet meals should be initially 0, but it was %.2f", CR_getGourmetSold(unicafe));
+    CR_free(&unicafe);
 }
 END_TEST
 
