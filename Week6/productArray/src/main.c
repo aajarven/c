@@ -54,7 +54,7 @@ int main()
         printf("It worked!\n");
     }
     
-    delete_product(&pa, "0000");
+    delete_product(&pa, "1234567");
     
     print_products(&pa);
     

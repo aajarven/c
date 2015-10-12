@@ -1,10 +1,6 @@
 #include <stdlib.h>
 #include "node.h"
 
-struct Node{
-    int value;
-    Node* next;
-};
 
 Node* newNode(int value){
     Node* node;

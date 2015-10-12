@@ -1,0 +1,4 @@
+[test] [test_delete_list] head_deletelist
+[test] [test_remove_product] head_removeitem
+[test] [test_find_product] head_finditem
+[test] [test_add_product] head_additem

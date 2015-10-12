@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-10-13 02:29:14</datetime>
+  <suite>
+    <title>ReverseAndCut</title>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:97</fn>
+      <id>test_reverse</id>
+      <iteration>0</iteration>
+      <duration>0.021406</duration>
+      <description>test_reverse</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:151</fn>
+      <id>test_cut</id>
+      <iteration>0</iteration>
+      <duration>0.006690</duration>
+      <description>test_cut</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.092196</duration>
+</testsuites>

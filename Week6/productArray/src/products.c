@@ -13,9 +13,10 @@
 void init_product(struct product *pr, const char *title, const char *code,
         int stock, double price)
 {
-    pr->title = malloc((strlen(title)+1)*sizeof(char));
+    pr->title =  malloc((strlen(title)+1)*sizeof(char));
     strcpy(pr->title, title);
-    strncpy(pr->code, code, 7);
+    strncpy(pr->code, code, 8);
+    pr->code[7] = '\0';
     pr->stock = stock;
     pr->price = price;
 }
@@ -31,11 +32,10 @@ void add_product(struct product_array *pa, const char *title, const char *code,
 {
 
     if (pa->arr == NULL){
-       pa->arr = malloc(sizeof(struct product));
        pa->count = 0;
     }
     
-    pa->arr = realloc(pa->arr, pa->count+1);   
+    pa->arr = realloc(pa->arr, (pa->count+1)*sizeof(struct product));   
 
     init_product(&pa->arr[pa->count], title, code, stock, price);
     pa->count++;
@@ -49,9 +49,13 @@ void add_product(struct product_array *pa, const char *title, const char *code,
  */
 int remove_all(struct product_array *pa)
 {
-    pa->arr = NULL;
+    for(unsigned int i=0; i<pa->count; i++){
+        free(pa->arr[i].title);
+    }
+
     pa->count = 0;
-    free(pa);
+    free(pa->arr);
+    pa->arr = NULL;
     return 1;
 }
 
@@ -64,14 +68,13 @@ int remove_all(struct product_array *pa)
  * Returns: pointer to the matching product in array, NULL if not found
  */
 struct product *find_product(struct product_array *pa, const char *code) {
-    struct product *tutkittava = malloc(sizeof(struct product));
+    struct product *tutkittava;
     for (unsigned int i = 0; i < pa->count; i++){
         tutkittava = &(pa->arr)[i];
-        if (strncmp(tutkittava->code, code, 7)){
+        if ((strncmp(tutkittava->code, code, 7))==0){
             return tutkittava;
         }
     }
-    free(tutkittava);
     return NULL;
 }
 
@@ -83,11 +86,16 @@ struct product *find_product(struct product_array *pa, const char *code) {
  */
 void delete_product(struct product_array *pa, const char *code) {
     struct product *poistettava = find_product(pa, code);
+    if (poistettava == NULL){
+        return;
+    }
 
-    unsigned int alkuIndeksi = (poistettava - pa->arr) / sizeof(struct product);
+    unsigned int alkuIndeksi = poistettava - pa->arr;
+    free(poistettava->title);
+    //printf("alkuIndeksi: %i\n", alkuIndeksi);
     for (unsigned int i=alkuIndeksi; i < pa->count-1; i++){
         pa->arr[i] = pa->arr[i+1];
     }
     pa->count--;
-    pa->arr = realloc(pa->arr, pa->count);
+    pa->arr = realloc(pa->arr, (pa->count)*sizeof(struct product));
 }

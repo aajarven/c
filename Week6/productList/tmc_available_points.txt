@@ -1,0 +1,4 @@
+[test] [test_delete_list] prList_delete
+[test] [test_remove_product] prList_remove
+[test] [test_find_product] prList_find
+[test] [test_add_product] prList_add

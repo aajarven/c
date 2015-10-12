@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2015-10-13 01:53:19</datetime>
+  <suite>
+    <title>ListWithHead</title>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:79</fn>
+      <id>test_add_product</id>
+      <iteration>0</iteration>
+      <duration>0.013723</duration>
+      <description>test_add_product</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:147</fn>
+      <id>test_find_product</id>
+      <iteration>0</iteration>
+      <duration>0.003791</duration>
+      <description>test_find_product</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:228</fn>
+      <id>test_remove_product</id>
+      <iteration>0</iteration>
+      <duration>0.007275</duration>
+      <description>test_remove_product</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>.</path>
+      <fn>test_source.c:295</fn>
+      <id>test_delete_list</id>
+      <iteration>0</iteration>
+      <duration>0.002677</duration>
+      <description>test_delete_list</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.092833</duration>
+</testsuites>

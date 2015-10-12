@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "list.h"
+#include "products.h"
+
 
 /*  From Aalto
  *
@@ -14,10 +15,10 @@
  *     removing product from the storage
  *     deleting the storage structures
  *
- * Data structure definition in list.h.  You are using a simple singly-linked list and passing the pointer to the first element (head node)
- *    of the list as argument to the functions.
+ * Data structure definition in products.h.  You are using a linked list with entry node in this version
  *
  */
+
 
 
 void print_product(struct product *p)
@@ -29,22 +30,29 @@ void print_product(struct product *p)
 
 int main()
 {
-    /* testing exercise 3.5. Feel free to modify this function */
+    /*Feel free to modify this function */
 
-    struct product *list = NULL;
+    struct product_list list;
+    struct product *p;
 
-    list = add_product(NULL, "test", "1234", 1, 0.50);
-    add_product(list, "Product 1", "0000", 0, 10);
-    add_product(list, "Long name, isn't it", "1234567890", 10, 100);
-    add_product(list, "Product 3", "9999999", 0, 20);
+    init_list(&list);
 
-    struct product *p = find_product(list, "0000");
+    add_product(&list, "test", "1234", 1, 0.50);
+
+
+
+    add_product(&list, "Product 1", "0000", 0, 10);
+    add_product(&list, "Long name, isn't it", "1234567890", 10, 100);
+    add_product(&list, "Product 3", "9999999", 0, 20);
+
+    p = find_product(&list, "0000");
     if (p)
         print_product(p);
     else
         printf("Not found\n");
 
-    list = remove_product(list, "9999999999");
+    int i=remove_product(&list, "0000");
+    printf("Removed %d items\n", i);
 
-    delete_list(list);
+    delete_list(&list);
 }

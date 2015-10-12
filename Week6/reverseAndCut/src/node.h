@@ -1,6 +1,12 @@
 #ifndef NODE_H
 #define	NODE_H
 
+struct Node{
+	int value;
+	struct Node* next;
+};
+
+
 typedef struct Node Node;
 
 Node* newNode(int value);

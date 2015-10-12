@@ -10,6 +10,13 @@ struct product {
     struct product *next; // pointer to next item in linked list
 };
 
+void init_list (struct product_list *list);
+
+struct product_list {
+    struct product *head;
+    // could have other list specific elements, like length of the list, last update time, etc
+};
+
 struct product *add_product(struct product *start, const char *title, const char *code,
         int stock, double price);
 struct product *find_product(struct product *start, const char *code);

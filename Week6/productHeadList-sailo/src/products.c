@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 #include "products.h"
-
 
 /* initializes the argument list */
 void init_list (struct product_list *list)
@@ -9,18 +9,18 @@ void init_list (struct product_list *list)
     list->head = NULL;
 }
 
-/* Initialize product structure */                                                               
+/* Initialize product structure */
 /* Parameters:
- * pr: Pointer to single product structure
- * title, code, stock, price: values to be copied as structure content.
- * Note: code should be truncated to 7 characters, if it is longer
- */
+ *  * pr: Pointer to single product structure
+ *   * title, code, stock, price: values to be copied as structure content.
+ *    * Note: code should be truncated to 7 characters, if it is longer
+ *     */
 void init_product(struct product *pr, const char *title, const char *code,
         int stock, double price, struct product *next)
 {
     pr->title =  malloc((strlen(title)+1)*sizeof(char));
     strcpy(pr->title, title);
-    strncpy(pr->code, code, 8);
+    strncpy(pr->code, code, 8); 
     pr->code[7] = '\0';
     pr->stock = stock;
     pr->price = price;
@@ -35,34 +35,25 @@ void init_product(struct product *pr, const char *title, const char *code,
  * 
  * Returns: pointer to the newly added node in the linked list
  */
-struct product *add_product(struct product_list *start, const char *title, const char *code,
+struct product *add_product(struct product *start, const char *title, const char *code,
         int stock, double price) {
     struct product *lisattava = malloc(sizeof(struct product));
     init_product(lisattava, title, code, stock, price, NULL);
 
-    struct product *eka = start->head;
-    if(eka == NULL){
-        start->head = lisattava;
-    } else {
-        struct product *mahdollinenViimeinen = start->head;
-        while (mahdollinenViimeinen->next != NULL){
-            mahdollinenViimeinen=mahdollinenViimeinen->next;
-        }
-        mahdollinenViimeinen->next = lisattava;
-    }
+    lisattava->next=start->next;
+    start->next=lisattava;
     return lisattava;
-
 }
 
 /* Find product */
 /* Parameters:
- * start: The head node
+ * start: first element in the linked list
  * code: product code to be found
  * 
  * Returns: Pointer to the first instance of product, or NULL if not found
  */
-struct product *find_product(struct product_list *start, const char *code) {
-    struct product *tutkittava = start->head;
+struct product *find_product(struct product *start, const char *code) {
+    struct product *tutkittava = start;
     while (tutkittava != NULL){
         if (strncmp(tutkittava->code, code, 7) == 0){
             return tutkittava;
@@ -74,46 +65,39 @@ struct product *find_product(struct product_list *start, const char *code) {
 
 /* Remove Product */
 /* Parameters:
- * start: The head node
+ * start: The first element in list
  * code: value to be removed
- *
- * Enough to remove first istance, no need to check for dublicates
- *
- * Returns: The number of removed items (0 or 1)
+ * 
+ * Returns: Pointer to the first element in the linked list
  */
-int remove_product(struct product_list *start, const char *code) {
-    struct product *tutkittava = start->head;
-    struct product *edellinen = NULL;
+struct product *remove_product(struct product *start, const char *code) {
+    struct product *tutkittava = start->next;
+    struct product *edellinen = start;
     while (tutkittava != NULL){
         if (strncmp(tutkittava->code, code, 7) == 0){
+            printf("löytyi etsitty, jonka code on %s\n", code);
             break;
         }
         edellinen = tutkittava;
         tutkittava = tutkittava->next;
     }
     if(tutkittava == NULL){
-        return 0;
+        return start;
     }
     free(tutkittava->title);
-    if(edellinen == NULL){
-        start->head = tutkittava->next;
-    } else {
-        edellinen->next = tutkittava->next;
-    }
-    free(tutkittava);                                                                        
-
-    return 1;
-
+    edellinen->next = tutkittava->next;
+    free(tutkittava);
+    return start;
 }
 
 /* Delete list */
 /* Parameters:
- * start: list head
- *
+ * start: first element in linked list
+ * 
  * Returns: 1, when list has been deleted
  */
-int delete_list(struct product_list *listhead) {
-    struct product *poistettava = listhead->head;
+int delete_list(struct product *start) {
+    struct product *poistettava = start;
     struct product *seuraava;
     while(poistettava != NULL){
         seuraava = poistettava->next;
@@ -122,5 +106,4 @@ int delete_list(struct product_list *listhead) {
         poistettava = seuraava;
     }
     return 1;
-    listhead->head = NULL;
 }

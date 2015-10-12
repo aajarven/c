@@ -15,8 +15,6 @@ struct product_list {
     // could have other list specific elements, like length of the list, last update time, etc.
     };
 
-void init_product(struct product *pr, const char *title, const char *code, int stock, double price, struct product *next);
-
 void init_list(struct product_list *list);
 struct product *add_product(struct product_list *start, const char *title, const char *code,
         int stock, double price);
