@@ -24,34 +24,38 @@ int getDestinationPort(const unsigned char *tcphdr)
 
 void setSourcePort(unsigned char *tcphdr, int port)
 {
-    tcphdr[0]=(port & 0b1111111111111111);
-    tcphdr[1]=(port & 0b00000000000000001111111111111111);
+    tcphdr[0]=(port >> 8);
+    tcphdr[1]=(port & 0b0000000011111111) ;
 }
 
 void setDestinationPort(unsigned char *tcphdr, int port)
 {
-    (void) tcphdr;
-    (void) port;
+    tcphdr[2]=(port >> 8);
+    tcphdr[3]=(port & 0b0000000011111111) ;
 }
 
 int getAckFlag(const unsigned char *tcphdr)
 {
-    return (tcphdr[6] & 0b0000000000010000) >> 4;
+    return (tcphdr[13] & 0b00010000) >> 4;
 }
 
 void setAckFlag(unsigned char *tcphdr, int flag)
 {
-    (void) tcphdr;
-    (void) flag;
+    if (flag == 1){
+        tcphdr[13] |= 0b00010000;
+    } else {
+        tcphdr[13] &= 0b11101111;
+    } 
 }
 
 int getDataOffset(const unsigned char *tcphdr)
 {
-    return (tcphdr[6] & 0b1111000000000000) >> 12;
+    return (tcphdr[12]) >> 4;
 }
 
 void setDataOffset(unsigned char *tcphdr, int offset)
 {
-    (void) tcphdr;
-    (void) offset;
+    int byte12 = offset << 4;
+    byte12 += tcphdr[12] & 0b00001111;
+    tcphdr[12] = byte12;
 }
